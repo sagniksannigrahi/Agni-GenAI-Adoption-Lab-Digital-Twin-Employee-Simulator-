@@ -1,0 +1,31 @@
+.legend { display: flex; gap: 14px; font-size: 12.5px; color: var(--ink-2); margin-bottom: 10px; flex-wrap: wrap; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+/* vertical grouped histogram */
+.hist { position: relative; height: 190px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; align-items: end; border-bottom: 1px solid var(--axis); padding: 0 4px; }
+.hist .gl { position: absolute; left: 0; right: 0; border-top: 1px solid var(--grid); }
+.hist .gl span { position: absolute; right: 100%; top: -8px; padding-right: 6px; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.hist-col { position: relative; z-index: 1; display: flex; gap: 2px; align-items: end; justify-content: center; height: 100%; }
+.bar { width: 100%; max-width: 30px; border-radius: 4px 4px 0 0; transition: height .5s ease; }
+.bar.a { background: var(--series-1); } .bar.b { background: var(--series-2); }
+.hist-axis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; padding: 6px 4px 0; font-size: 11.5px; color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
+.chart-wrap { padding-left: 26px; }
+
+/* horizontal bars */
+.hbars { display: grid; gap: 12px; }
+.hbar-row { display: grid; grid-template-columns: minmax(100px, 150px) 1fr 44px; gap: 10px; align-items: center; font-size: 13px; }
+.hbar-label { color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar-track { height: 14px; border-left: 1px solid var(--axis); }
+.hbar-fill { height: 100%; background: var(--series-1); border-radius: 0 4px 4px 0; transition: width .5s ease; }
+.hbar-val { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
+
+/* stacked sentiment bar */
+.stack-bar { display: flex; height: 18px; border-radius: 5px; overflow: hidden; gap: 2px; }
+.stack-bar > div { height: 100%; }
+
+/* radial gauge */
+.gauge { position: relative; width: 120px; height: 120px; }
+.gauge svg { transform: rotate(-90deg); }
+.gauge .num { position: absolute; inset: 0; display: grid; place-items: center; font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
+.gauge .num small { display: block; font-size: 11px; color: var(--muted); font-weight: 500; text-align: center; margin-top: -6px; }

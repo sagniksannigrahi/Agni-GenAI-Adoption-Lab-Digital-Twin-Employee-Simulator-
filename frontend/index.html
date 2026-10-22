@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agni · GenAI Adoption Lab</title>
+  <meta name="description" content="Digital-twin employees for GenAI beta testing, training, feedback analysis, prompt coaching and support practice." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/charts.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">🔥</div>
+        <div><b>AGNI</b><small>GenAI Adoption Lab</small></div>
+      </div>
+
+      <nav class="nav" id="nav">
+        <a href="#/" data-route="dashboard"><span class="ico">🏠</span>Dashboard</a>
+        <div class="nav-label">Simulate</div>
+        <a href="#/personas" data-route="personas"><span class="ico">👥</span>Persona Lab <span class="count" id="nav-count">0</span></a>
+        <a href="#/beta-test" data-route="simulator"><span class="ico">🧪</span>Beta Test Simulator</a>
+        <div class="nav-label">Enable</div>
+        <a href="#/training" data-route="training"><span class="ico">🎓</span>Training Studio</a>
+        <a href="#/prompt-coach" data-route="prompt"><span class="ico">✍️</span>Prompt Coach</a>
+        <div class="nav-label">Support</div>
+        <a href="#/feedback" data-route="feedback"><span class="ico">📊</span>Feedback Analyzer</a>
+        <a href="#/support" data-route="support"><span class="ico">🎧</span>Support Simulator</a>
+      </nav>
+
+      <div class="side-foot">
+        <span id="engine-status">Checking engine…</span>
+        <span>Built for the GenAI Customer Success team</span>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="btn ghost sm menu-btn" id="menu-btn" aria-label="Open menu">☰</button>
+        <div class="crumb" id="crumb"></div>
+        <div class="spacer"></div>
+        <span class="badge" id="mode-badge">…</span>
+        <button class="btn ghost sm" id="theme-btn" aria-label="Toggle theme">🌓</button>
+      </header>
+      <main class="content" id="view"></main>
+    </div>
+  </div>
+
+  <a class="credit" href="https://thesagnik.in" target="_blank" rel="noopener">
+    <span class="dot">S</span>thesagnik.in ↗
+  </a>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true"></aside>
+  <div class="toast" id="toast"></div>
+  <div class="tip" id="tip"></div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
